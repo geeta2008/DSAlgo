@@ -15,11 +15,6 @@ public class TestSetup extends DriverFactory {
 	public PageObjectManager pageObjectManager;
 	public DriverFactory driverFactory;
 	
-	
-/*	public WebDriver getDriver()
-	  {
-	    return driver;
-	  }*/
   public TestSetup()
 	{
 		driverFactory= new DriverFactory();

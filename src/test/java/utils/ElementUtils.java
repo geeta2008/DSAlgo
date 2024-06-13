@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ElementUtils {
 	
-	WebDriver driver;
+	static WebDriver driver;
 	
 	public ElementUtils(WebDriver driver) {
 		this.driver=driver;
@@ -29,7 +29,7 @@ public class ElementUtils {
 		webElement.sendKeys(textToBeTyped);
 	}
 	
-	public WebElement waitForElement(WebElement element,long durationInSeconds) {
+	public static WebElement waitForElement(WebElement element,long durationInSeconds) {
 		
 		WebElement webElement =null;
 		try {

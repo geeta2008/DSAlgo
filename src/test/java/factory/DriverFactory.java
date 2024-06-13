@@ -18,6 +18,7 @@ public class DriverFactory {
 
 		Properties prop = ConfigReader.intializeProperties();
 		String url=prop.getProperty("url");
+		String homeurl=prop.getProperty("homepageurl");
 		String browserName_properties = prop.getProperty("browser");
 		String browser_maven=prop.getProperty("browser");
 		String browser=browser_maven!= null ? browser_maven:browserName_properties;
@@ -45,7 +46,7 @@ public class DriverFactory {
 		driver.get(prop.getProperty("url"));
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 		return driver;
 

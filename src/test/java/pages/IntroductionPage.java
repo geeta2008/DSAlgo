@@ -5,12 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utils.ElementUtils;
+
 
 
 public class IntroductionPage {
 	WebDriver driver;
 	
-	@FindBy(xpath = "//button[contains(text(),'Get Started')]")
+	@FindBy(className = "btn")
 	WebElement getStartBtn;
 
 	@FindBy(xpath = "//div[@class='content-area']//p")
@@ -24,6 +26,7 @@ public class IntroductionPage {
 	}
 
 	public void clickOnGetStartedBtn() {
+		ElementUtils.waitForElement(getStartBtn, 15);
 		getStartBtn.click();
 	}
 
