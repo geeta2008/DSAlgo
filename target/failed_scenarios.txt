@@ -1,2 +1,1 @@
-file:src/test/java/features/IntroductionPage.feature:4
-file:src/test/java/features/HomePage.feature:9
+file:src/test/java/features/TC02_DashboardPage.feature:6

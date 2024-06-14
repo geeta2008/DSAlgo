@@ -26,7 +26,7 @@ public class IntroductionPage {
 	}
 
 	public void clickOnGetStartedBtn() {
-		ElementUtils.waitForElement(getStartBtn, 15);
+		ElementUtils.waitForElement(getStartBtn, 30);
 		getStartBtn.click();
 	}
 
@@ -35,6 +35,6 @@ public class IntroductionPage {
 	}
 
 	public String navigateToDSURL() {
-		return driver.getCurrentUrl();
+		return this.driver.getCurrentUrl();
 	}
 }

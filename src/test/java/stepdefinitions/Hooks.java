@@ -31,15 +31,21 @@ public class Hooks {
 	@After
 	public void AfterScenario(Scenario scenario) throws IOException {
 
-		WebDriver driver = testSetup.driverFactory.getDriver();
+//
+//		if (scenario.isFailed()) {
+////			File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+////			byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
+////			scenario.attach(fileContent, "image/png", "image");
+//
+//			File srcfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//			File Dest = new File(("src/../Images/" + System.currentTimeMillis() + ".png"));
+//
+//			//String imagePath = Dest.getAbsolutePath();
+//			FileUtils.copyFile(srcfile, Dest);
 
-		if (scenario.isFailed()) {
-			File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
-			scenario.attach(fileContent, "image/png", "image");
-		}
-		
-		driver.quit();
+//		}
+//
+		//driver.quit();
 
 	}
 }

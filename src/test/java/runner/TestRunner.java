@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
                  glue = {"stepdefinitions"},
                  monochrome=true,
                 // dryRun=true,
-                // tags="@homePage",
+                 //tags="@introductionPage",
                  publish=true,
                  plugin={"pretty",
                 		 "html:target/CucumberReports/CucumberReport.html",

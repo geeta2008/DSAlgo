@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import factory.DriverFactory;
 import utils.ElementUtils;
 
+import java.util.List;
+
 public class HomePage  {
 	WebDriver driver;
 
@@ -18,8 +20,8 @@ public class HomePage  {
 	@FindBy(linkText = "Data Structures")
 	WebElement dropdown;
 	
-	@FindBy(xpath ="//div[@class='dropdown-menu show']")
-	WebElement dropdownsize;
+	@FindBy(xpath ="//div[@class='dropdown-menu show']/a")
+	List<WebElement> dropdownsize;
 	
 
 	public HomePage(WebDriver driver) {
@@ -44,8 +46,9 @@ public class HomePage  {
 		return dropdown.getText();
 	}
 	
-	public Dimension countdropdownitems() {
-		return dropdownsize.getSize();
+	public Integer countdropdownitems() {
+     return dropdownsize.size();
+
 	}
 	
 	

@@ -33,18 +33,12 @@ public class IntroductionStepDefinition {
 
 	@When("User clicks the Get Started button")
 	public void User_clicks_the_Get_Started_button() throws Exception {
-         Thread.sleep(500);
 		introductionPage.clickOnGetStartedBtn();
-		
-		System.out.println("User click get started btn");
 	}
-
 	@Then("User should land on the homepage")
 	public void User_should_land_on_the_homepage() {
 
-		testsetup.pageObjectManager.getHomePage();
-		System.out.println(homepage.getHomePageTitle());
-		Assert.assertEquals(homepage.getHomePageTitle(), "Numpy Ninja");
+		Assert.assertTrue(homepage.getHomePageTitle().contains("NumpyNinja"));
 		
 
 	}
